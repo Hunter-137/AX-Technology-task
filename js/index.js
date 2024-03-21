@@ -1,6 +1,7 @@
 // запуск DOM
 import { Viewer } from "@photo-sphere-viewer/core";
-document.addEventListener("DOMContentLoaded", function () {
+
+document.addEventListener("DOMContentLoaded", () => {
   // ************************************************************************************************************** Модальное окно брошюры
   // константы
   const modalWindow = Array.from(document.querySelectorAll(".modal")); // модальное окно
@@ -10,29 +11,18 @@ document.addEventListener("DOMContentLoaded", function () {
   ); // кнопка крестик — закрытие модального окна
   const modalPlaces = Array.from(document.querySelectorAll(".main-place")); // кнопки обзор 360
   const viewBlocks = Array.from(document.querySelectorAll(".viewer")); // блоки для обзора 360
+  const viewers = [
+    { selector: "#viewer-apartments", panorama: "./img/apartments.png" },
+    { selector: "#viewer-park", panorama: "./img/park.png" },
+    { selector: "#viewer-mansions", panorama: "./img/mansions.png" },
+    { selector: "#viewer-road", panorama: "./img/road.png" },
+  ];
 
-  // 360 обзор апартаменты
-  const viewerApartments = new Viewer({
-    container: document.querySelector("#viewer-apartments"),
-    panorama: "./img/apartments.png",
-  });
-
-  // 360 обзор парка
-  const viewerPark = new Viewer({
-    container: document.querySelector("#viewer-park"),
-    panorama: "./img/park.png",
-  });
-
-  // 360 обзор особняков
-  const viewerMansions = new Viewer({
-    container: document.querySelector("#viewer-mansions"),
-    panorama: "./img/mansions.png",
-  });
-
-  // 360 обзор дороги
-  const viewerRoad = new Viewer({
-    container: document.querySelector("#viewer-road"),
-    panorama: "./img/road.png",
+  viewers.forEach(({ selector, panorama }) => {
+    new Viewer({
+      container: document.querySelector(selector),
+      panorama,
+    });
   });
 
   // открытие модального окна по клику на кнопку

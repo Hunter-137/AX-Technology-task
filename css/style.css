@@ -161,27 +161,49 @@ body {
   margin-right: 5px;
 }
 
-@media (max-width: 1920px) {
+.apartments {
+  position: absolute;
+  top: 12%;
+  left: 45%;
+}
+
+.park {
+  position: absolute;
+  top: 65%;
+  left: 38%;
+}
+
+.mansions {
+  position: absolute;
+  top: 70%;
+  left: 17%;
+}
+
+.road {
+  position: absolute;
+  top: 85%;
+  left: 75%;
+}
+
+@media (max-width: 900px) {
   .apartments {
-    position: absolute;
-    top: 12%;
+    top: 25%;
     left: 45%;
   }
+}
 
+@media (max-width: 700px) {
   .park {
-    position: absolute;
-    top: 65%;
-    left: 38%;
+    top: 59%;
+    left: 34%;
   }
 
   .mansions {
-    position: absolute;
-    top: 70%;
-    left: 17%;
+    top: 67%;
+    left: 5%;
   }
 
   .road {
-    position: absolute;
     top: 85%;
     left: 75%;
   }
