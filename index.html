@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.min.css"
+    />
     <link rel="shortcut icon" href="./icon/favicon.ico" type="image/x-icon" />
     <title>Keturah Resort</title>
   </head>
@@ -147,7 +151,7 @@
       </footer>
       <div class="footer-overlay"></div>
 
-      <!-- Модальное окно -->
+      <!-- Модальное окно брошюры -->
       <div class="modal">
         <div class="modal-content">
           <div class="modal__close-btn"></div>
@@ -243,7 +247,26 @@
           </div>
         </div>
       </div>
+
+      <!-- Модальное окно обзор 360 -->
+      <div class="modal">
+        <div class="modal-sphere-content">
+          <div class="modal__close-btn"></div>
+          <div id="viewer-apartments" class="viewer"></div>
+          <div id="viewer-park" class="viewer"></div>
+          <div id="viewer-mansions" class="viewer"></div>
+          <div id="viewer-road" class="viewer"></div>
+        </div>
+      </div>
     </div>
-    <script src="./js/index.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three/build/three.module.js",
+          "@photo-sphere-viewer/core": "https://cdn.jsdelivr.net/npm/@photo-sphere-viewer/core/index.module.js"
+        }
+      }
+    </script>
+    <script src="./js/index.js" type="module"></script>
   </body>
 </html>

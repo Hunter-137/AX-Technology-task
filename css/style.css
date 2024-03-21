@@ -443,3 +443,13 @@ body {
     background-color: #bdbcbc;
   }
 }
+
+.modal-sphere-content {
+  position: relative;
+}
+
+.viewer {
+  width: 80vw;
+  height: 80vh;
+  display: none;
+}
