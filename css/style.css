@@ -531,7 +531,7 @@ body {
     backdrop-filter: brightness(0.2);
     flex-direction: column-reverse;
     gap: 5px;
-    transition-duration: 800ms;
+    transition-duration: 300ms;
     transition-timing-function: ease-in-out;
     z-index: 20;
   }
@@ -627,5 +627,12 @@ body {
 
   .park {
     top: 55%;
+  }
+}
+
+@media (max-height: 730px) and (max-width: 900px) {
+  .modal-content {
+    position: absolute;
+    top: 20px;
   }
 }
