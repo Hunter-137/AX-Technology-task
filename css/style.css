@@ -108,6 +108,19 @@ body {
   cursor: pointer;
   padding: 5px;
   text-decoration: none;
+  position: relative;
+  transition-duration: 1s;
+}
+
+.menu-number__item_hiden {
+  transition-duration: 1s;
+  opacity: 1;
+}
+
+.menu-number__item_open {
+  position: absolute;
+  left: 70px;
+  opacity: 0;
 }
 
 .main {
@@ -217,7 +230,6 @@ body {
 .footer-download__item {
   padding: 6px;
   box-sizing: content-box;
-  border: 1px dashed #fff;
 }
 
 .modal {
@@ -235,6 +247,7 @@ body {
   visibility: hidden;
   opacity: 0;
   transition-duration: 500ms;
+  overflow: scroll;
 }
 
 .modal._active {
@@ -340,7 +353,8 @@ body {
 }
 
 .modal-link-telegram__text::after,
-.modal-link-whatsapp__text::after {
+.modal-link-whatsapp__text::after,
+.menu-number__item::after {
   content: "";
   position: absolute;
   width: 0;
@@ -435,7 +449,8 @@ body {
   }
 
   .modal-link-telegram-btn:hover .modal-link-telegram__text::after,
-  .modal-link-whatsapp-btn:hover .modal-link-whatsapp__text::after {
+  .modal-link-whatsapp-btn:hover .modal-link-whatsapp__text::after,
+  .header-menu-number:hover .menu-number__item:hover::after {
     width: 100%;
   }
 
@@ -448,6 +463,21 @@ body {
   .apartments {
     top: 25%;
     left: 45%;
+  }
+
+  .modal-content {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .modal__title,
+  .modal-content-form {
+    margin-top: 30px;
+  }
+
+  .modal-link,
+  .form-data-submit {
+    margin-bottom: 30px;
   }
 }
 
@@ -535,6 +565,58 @@ body {
 
   .footer-download__text {
     font-size: 11px;
+  }
+}
+
+@media (max-width: 500px) {
+  .header-title {
+    width: 250px;
+  }
+
+  .header-title__item {
+    width: 240px;
+  }
+
+  .modal-content {
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+  }
+
+  .modal-content > .modal__close-btn {
+    top: -7px;
+    right: 0px;
+  }
+
+  .modal-content-description {
+    width: 340px;
+  }
+
+  .modal__title {
+    font-size: 30px;
+    width: auto;
+  }
+
+  .modal__text {
+    width: auto;
+    padding: 0 5px;
+  }
+
+  .modal-content-form-wrapper {
+    width: 340px;
+  }
+
+  .modal-content-form {
+    width: 340px;
+  }
+
+  .form-data {
+    width: 100%;
+    padding: 0 5px;
+  }
+
+  .form-data-submit {
+    width: 100%;
   }
 }
 
