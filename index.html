@@ -154,7 +154,7 @@
       <div class="footer-overlay"></div>
 
       <!-- Модальное окно брошюры -->
-      <div class="modal">
+      <div class="modal modal-brochure">
         <div class="modal-content">
           <div class="modal__close-btn"></div>
           <div class="modal-content-description">
@@ -233,6 +233,8 @@
                 type="email"
                 required
                 placeholder="Your e-mail"
+                pattern="[a-zA-Z0-9@.\s]+"
+                title="Please, use only English letters"
               />
               <label for="dataPhone"></label>
               <input
@@ -241,8 +243,8 @@
                 type="text"
                 required
                 placeholder="Phone number"
-                pattern="[0-9+\s]+"
-                title="Please, use only numbers and plus"
+                pattern="^[\+]?[0-9\s]+"
+                title="Please, use only numbers and put a one plus at first if needed"
               />
               <button class="form-data-submit" type="submit">Join now</button>
             </form>
@@ -251,7 +253,7 @@
       </div>
 
       <!-- Модальное окно обзор 360 -->
-      <div class="modal">
+      <div class="modal modal-viewer">
         <div class="modal-sphere-content">
           <div class="modal__close-btn"></div>
           <div id="viewer-apartments" class="viewer"></div>
